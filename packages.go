@@ -7,4 +7,5 @@ import (
 
 func main() {
 	fmt.Println("My favorite number is", rand.Intn(10))
+	main1()
 }
