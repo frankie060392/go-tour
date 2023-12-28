@@ -6,4 +6,5 @@ func main() {
 	main3()
 	main4()
 	multiple()
+	name()
 }
