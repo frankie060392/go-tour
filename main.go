@@ -27,4 +27,5 @@ func main() {
 	makeFunc()
 	rangeFunc()
 	maps()
+	testWorldCount()
 }
