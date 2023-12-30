@@ -24,4 +24,5 @@ func main() {
 	struct1()
 	pointerVer()
 	arrays()
+	makeFunc()
 }
