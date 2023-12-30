@@ -9,4 +9,5 @@ func main() {
 	name()
 	variables()
 	varFunc()
+	shortVar()
 }
