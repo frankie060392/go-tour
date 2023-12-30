@@ -26,4 +26,5 @@ func main() {
 	arrays()
 	makeFunc()
 	rangeFunc()
+	maps()
 }
