@@ -7,4 +7,5 @@ func main() {
 	main4()
 	multiple()
 	name()
+	variables()
 }
