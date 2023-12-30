@@ -12,4 +12,5 @@ func main() {
 	shortVar()
 	types()
 	typeConversion()
+	typeInterence()
 }
