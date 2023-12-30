@@ -14,4 +14,5 @@ func main() {
 	typeConversion()
 	typeInterence()
 	constant()
+	numericConstant()
 }
