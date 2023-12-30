@@ -13,4 +13,5 @@ func main() {
 	types()
 	typeConversion()
 	typeInterence()
+	constant()
 }
