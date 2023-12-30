@@ -16,4 +16,5 @@ func main() {
 	constant()
 	numericConstant()
 	forLoop()
+	ifelse()
 }
