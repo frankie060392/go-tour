@@ -8,4 +8,5 @@ func main() {
 	multiple()
 	name()
 	variables()
+	varFunc()
 }
