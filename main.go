@@ -19,4 +19,5 @@ func main() {
 	ifelse()
 	switchFunc()
 	switchFuncNoCon()
+	def()
 }
