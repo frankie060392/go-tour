@@ -9,7 +9,7 @@ func forLoop() {
 	}
 	println(sum)
 	sum1 := 1
-	for sum1 < 10 {
+	for sum1 < 10 { // The same as white
 		println(sum1)
 		sum1 += sum1
 	}
