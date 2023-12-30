@@ -20,4 +20,5 @@ func main() {
 	switchFunc()
 	switchFuncNoCon()
 	def()
+	pointer()
 }
