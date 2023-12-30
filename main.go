@@ -22,4 +22,5 @@ func main() {
 	def()
 	pointer()
 	struct1()
+	pointerVer()
 }
