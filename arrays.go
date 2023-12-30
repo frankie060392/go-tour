@@ -17,4 +17,9 @@ func arrays() {
 
 	primesSliced[1] = 9
 	fmt.Println(primes)
+
+	primesSlicedDefault := primes[:4]
+	fmt.Println(primesSlicedDefault)
+	primesSlicedDefault = primes[1:]
+	fmt.Println(primesSlicedDefault)
 }
