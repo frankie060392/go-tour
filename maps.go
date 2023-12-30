@@ -22,4 +22,9 @@ func maps() {
 	}
 	fmt.Println(m["Bell Labs"])
 	fmt.Println(n["Bell Labs"])
+	delete(n, "Bell Labs")
+	fmt.Println(n["Bell Labs"])
+
+	elem, ok := m["Bell Labs"]
+	fmt.Println("%b and %b", elem, ok)
 }
