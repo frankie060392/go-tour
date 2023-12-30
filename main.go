@@ -10,4 +10,5 @@ func main() {
 	variables()
 	varFunc()
 	shortVar()
+	types()
 }
