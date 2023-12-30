@@ -21,4 +21,5 @@ func main() {
 	switchFuncNoCon()
 	def()
 	pointer()
+	struct1()
 }
