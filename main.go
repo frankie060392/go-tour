@@ -25,4 +25,5 @@ func main() {
 	pointerVer()
 	arrays()
 	makeFunc()
+	rangeFunc()
 }
