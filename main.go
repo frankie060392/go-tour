@@ -18,4 +18,5 @@ func main() {
 	forLoop()
 	ifelse()
 	switchFunc()
+	switchFuncNoCon()
 }
