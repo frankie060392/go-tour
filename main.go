@@ -17,4 +17,5 @@ func main() {
 	numericConstant()
 	forLoop()
 	ifelse()
+	switchFunc()
 }
