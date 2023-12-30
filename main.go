@@ -23,4 +23,5 @@ func main() {
 	pointer()
 	struct1()
 	pointerVer()
+	arrays()
 }
