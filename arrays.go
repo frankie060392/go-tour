@@ -35,4 +35,9 @@ func arrays() {
 	if s == nil {
 		fmt.Println("Nil!")
 	}
+	fmt.Println("Append to slice")
+	s = append(s, 0)
+	printSlice(s)
+	s = append(s, 1)
+	fmt.Println(s)
 }
