@@ -28,4 +28,11 @@ func arrays() {
 	fmt.Println(primesSlicedDefault)
 	primesSlicedDefault = primes[1:]
 	fmt.Println(primesSlicedDefault)
+
+	var s []int
+	printSlice(s)
+	fmt.Println(s)
+	if s == nil {
+		fmt.Println("Nil!")
+	}
 }
