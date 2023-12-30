@@ -11,4 +11,5 @@ func main() {
 	varFunc()
 	shortVar()
 	types()
+	typeConversion()
 }
