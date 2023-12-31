@@ -32,4 +32,5 @@ func main() {
 	closureFibo()
 	methods()
 	methodPointers()
+	methodPoinerEx()
 }
