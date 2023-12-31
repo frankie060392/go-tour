@@ -37,4 +37,5 @@ func main() {
 	interfaces()
 	typeAssertions()
 	switchTypes()
+	stringer()
 }
