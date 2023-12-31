@@ -30,4 +30,5 @@ func main() {
 	testWorldCount()
 	closure()
 	closureFibo()
+	methods()
 }
