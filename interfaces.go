@@ -40,6 +40,18 @@ func interfaces() {
 	var i1 I
 	fmt.Printf("(%v, %T)\n", i1, i1)
 	// i1.M()
+
+	var i2 interface{}
+	describe(i2)
+	i2 = 32
+	describe(i2)
+	i2 = "Frankie"
+	describe(i2)
+
+}
+
+func describe(i interface{}) {
+	fmt.Printf("(%v, %T)\n", i, i)
 }
 
 type I interface {
