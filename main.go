@@ -40,4 +40,5 @@ func main() {
 	stringer()
 	stringex()
 	errorFunc()
+	reader()
 }
