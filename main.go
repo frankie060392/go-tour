@@ -38,4 +38,5 @@ func main() {
 	typeAssertions()
 	switchTypes()
 	stringer()
+	stringex()
 }
