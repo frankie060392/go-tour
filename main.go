@@ -33,4 +33,5 @@ func main() {
 	methods()
 	methodPointers()
 	methodPoinerEx()
+	indirection()
 }
