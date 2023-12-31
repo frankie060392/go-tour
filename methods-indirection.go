@@ -1,9 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type VertexIndirection struct {
 	X, Y float64
+}
+
+func (v VertexIndirection) Abs() float64 {
+	v.X = 1
+	v.Y = 2
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func (v *VertexIndirection) Scale(f float64) {
@@ -26,6 +35,9 @@ func indirection() {
 	p := &VertexIndirection{4, 3}
 	p.Scale(3)
 	ScaleFunc(p, 8)
-
 	fmt.Println(v, p)
+	test := &VertexIndirection{4, 3}
+	test.Abs()
+	fmt.Println(test)
+
 }
