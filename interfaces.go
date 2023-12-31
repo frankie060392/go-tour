@@ -37,6 +37,9 @@ func interfaces() {
 
 	var i I = T{"Frankie"}
 	i.M()
+	var i1 I
+	fmt.Printf("(%v, %T)\n", i1, i1)
+	// i1.M()
 }
 
 type I interface {
