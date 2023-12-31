@@ -39,4 +39,5 @@ func main() {
 	switchTypes()
 	stringer()
 	stringex()
+	errorFunc()
 }
