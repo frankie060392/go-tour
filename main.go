@@ -41,4 +41,5 @@ func main() {
 	stringex()
 	errorFunc()
 	reader()
+	typeParams()
 }
