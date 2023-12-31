@@ -36,4 +36,5 @@ func main() {
 	indirection()
 	interfaces()
 	typeAssertions()
+	switchTypes()
 }
