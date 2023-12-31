@@ -35,4 +35,5 @@ func main() {
 	methodPoinerEx()
 	indirection()
 	interfaces()
+	typeAssertions()
 }
