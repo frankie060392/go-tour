@@ -30,15 +30,18 @@ func runOk() string {
 	return "It works"
 }
 
-type ErrNegativeSqrt float64
+type ErrNegativeSqrt struct {
+	Text  string
+	Value float64
+}
 
-func (e ErrNegativeSqrt) Error(f float64) string {
-	return fmt.Sprintf("Can not sqrt Nagative sqrt number: %v", f)
+func (e ErrNegativeSqrt) Error() string {
+	return fmt.Sprintf("%v: %v", e.Text, e.Value)
 }
 
 func Sqrt(x float64) (float64, string) {
 	if x < 0 {
-		return 0, ErrNegativeSqrt(x).Error(x)
+		return 0, ErrNegativeSqrt{"Can not sqrt negative value: ", x}.Error()
 	}
 	return math.Sqrt(x), "Is Ok"
 }
