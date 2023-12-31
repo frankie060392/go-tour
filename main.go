@@ -29,4 +29,5 @@ func main() {
 	maps()
 	testWorldCount()
 	closure()
+	closureFibo()
 }
