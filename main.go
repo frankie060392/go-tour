@@ -42,4 +42,5 @@ func main() {
 	errorFunc()
 	reader()
 	typeParams()
+	goroutine()
 }
