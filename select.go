@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func fiboSelect(c, quit chan int) {
 	x, y := 0, 1
@@ -25,4 +28,20 @@ func selectChan() {
 		quit <- 0
 	}()
 	fiboSelect(c, quit)
+
+	tick := time.Tick(100 * time.Millisecond)
+	boom := time.After(500 * time.Millisecond)
+
+	for {
+		select {
+		case <-tick:
+			fmt.Println("Tick.")
+		case <-boom:
+			fmt.Println("Boom.")
+			return
+		default:
+			fmt.Println("Waiting.")
+			time.Sleep(50 * time.Millisecond)
+		}
+	}
 }
