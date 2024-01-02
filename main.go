@@ -45,4 +45,5 @@ func main() {
 	goroutine()
 	channels()
 	channelsFibo()
+	selectChan()
 }
