@@ -43,4 +43,5 @@ func main() {
 	reader()
 	typeParams()
 	goroutine()
+	channels()
 }
