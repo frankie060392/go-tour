@@ -44,4 +44,5 @@ func main() {
 	typeParams()
 	goroutine()
 	channels()
+	channelsFibo()
 }
