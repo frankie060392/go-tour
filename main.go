@@ -46,4 +46,5 @@ func main() {
 	channels()
 	channelsFibo()
 	selectChan()
+	mutex()
 }
