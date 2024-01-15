@@ -47,4 +47,6 @@ func main() {
 	channelsFibo()
 	selectChan()
 	mutex()
+	WaitGroupTest()
+	ChannelTestAdvance()
 }
