@@ -51,5 +51,6 @@ func main() {
 	// ChannelTestAdvance()
 	// SimpleChannel()
 	// RacingChannels()
-	RunraceMilti()
+	// RunraceMilti()
+	TestMutex()
 }
