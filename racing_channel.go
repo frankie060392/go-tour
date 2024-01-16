@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"sync"
 	"time"
 )
 
@@ -46,4 +47,59 @@ func RacingChannels() {
 	time.Sleep(8 * time.Second)
 	fmt.Println("Race over!")
 
+}
+
+func RunraceMilti() {
+
+	lambo, ferari := make(chan string), make(chan string)
+
+	var wg sync.WaitGroup
+	wg.Add(20)
+	go addCarsToChan(&wg, ferari, "ferari")
+	// wg.Wait()
+	// wg.Add(5)
+	go addCarsToChan(&wg, lambo, "lambo")
+	// wg.Wait()
+	// wg.Add(10)
+	go startRaceMulti(&wg, ferari, lambo)
+	// Wait for the race to finish if do not use waitgroup
+	// time.Sleep(25 * time.Second)
+	wg.Wait()
+	fmt.Println("Race over!")
+}
+
+func addCarsToChan(wg *sync.WaitGroup, c chan string, car string) {
+	for i := 0; i < 5; i++ {
+		c <- car
+		fmt.Println(car, "add to channel")
+		wg.Done()
+	}
+	close(c)
+}
+
+func startRaceMulti(wg *sync.WaitGroup, ferari chan string, lambo chan string) {
+	for {
+		select {
+		case car, ok := <-ferari:
+			if !ok {
+				fmt.Println("Ferari hash closed")
+				ferari = nil
+				break
+			}
+			fmt.Println(car, "is running")
+			wg.Done()
+		case car, ok := <-lambo:
+			if !ok {
+				fmt.Println(car, "Lambo has closed")
+				lambo = nil
+				break
+			}
+			fmt.Println(car, "is running")
+			wg.Done()
+		}
+		if ferari == nil && lambo == nil {
+			break
+		}
+	}
+	fmt.Println("All cars have finished the race!")
 }

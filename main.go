@@ -50,5 +50,6 @@ func main() {
 	// WaitGroupTest()
 	// ChannelTestAdvance()
 	// SimpleChannel()
-	RacingChannels()
+	// RacingChannels()
+	RunraceMilti()
 }
