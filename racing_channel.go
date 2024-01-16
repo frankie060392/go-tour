@@ -54,7 +54,7 @@ func RunraceMilti() {
 	lambo, ferari := make(chan string), make(chan string)
 
 	var wg sync.WaitGroup
-	wg.Add(20)
+	wg.Add(3)
 	go addCarsToChan(&wg, ferari, "ferari")
 	// wg.Wait()
 	// wg.Add(5)
@@ -72,8 +72,8 @@ func addCarsToChan(wg *sync.WaitGroup, c chan string, car string) {
 	for i := 0; i < 5; i++ {
 		c <- car
 		fmt.Println(car, "add to channel")
-		wg.Done()
 	}
+	wg.Done()
 	close(c)
 }
 
@@ -87,7 +87,6 @@ func startRaceMulti(wg *sync.WaitGroup, ferari chan string, lambo chan string) {
 				break
 			}
 			fmt.Println(car, "is running")
-			wg.Done()
 		case car, ok := <-lambo:
 			if !ok {
 				fmt.Println(car, "Lambo has closed")
@@ -95,11 +94,11 @@ func startRaceMulti(wg *sync.WaitGroup, ferari chan string, lambo chan string) {
 				break
 			}
 			fmt.Println(car, "is running")
-			wg.Done()
 		}
 		if ferari == nil && lambo == nil {
 			break
 		}
 	}
+	wg.Done()
 	fmt.Println("All cars have finished the race!")
 }
