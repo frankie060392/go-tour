@@ -13,14 +13,19 @@ func addCars(cars chan string, name string) {
 
 func startRace(cars chan string) {
 	fmt.Println("start race ........")
-	for {
-		car, open := <-cars
-		fmt.Println(car)
-		fmt.Println(open)
-		if !open {
-			break
-		}
+	// for {
+	// 	car, open := <-cars
+	// 	fmt.Println(car)
+	// 	fmt.Println(open)
+	// 	if !open {
+	// 		break
+	// 	}
 
+	// 	fmt.Println(car, "car is running ....")
+	// 	time.Sleep(time.Duration(1+rand.Intn(5)) * time.Second)
+	// }
+
+	for car := range cars {
 		fmt.Println(car, "car is running ....")
 		time.Sleep(time.Duration(1+rand.Intn(5)) * time.Second)
 	}
